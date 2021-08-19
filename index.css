@@ -158,7 +158,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* color property is for .svg but i can not find one :C */
 .card__logo--blue {
     color: #1E88E5;
     background-color: #BBDEFB;
