@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-background-primary: #ECECF8;
+    --color-background-secondary: #FFFFFF;
+    --color-foreground-primary: #5C6BC0;
+    --color-foreground-secondary: #1A237E;
+    --color-accent-primary: #FFAB02;
+    --color-accent-secondary: #314EFE;
+    --color-additional-1: #E0DFE0;
+
+    --font-family-primary: 'Roboto', sans-serif;
+
+    font-size: 8px;
+}
+
+@media screen and (min-width: 1080px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 2160px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 4320px) {
+    :root {
+        font-size: 24px;
+    }
+}
+
+body {
+    color: var(--color-foreground-primary);
+    background: linear-gradient(var(--color-background-primary), var(--color-background-secondary));
+    font-family: var(--font-family-primary);
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media screen and (min-width: 1080px) {
+    .layout::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        height: 60%;
+        border-radius: 100% 0 0 0;
+        background: linear-gradient(var(--color-background-primary), var(--color-background-secondary));
+        z-index: -1;
+    }
+
+    .layout::before {
+        content: '';
+        position: absolute;
+        right: 15%;
+        bottom: 40%;
+        width: 0;
+        height: 0;
+        border-left: 20rem solid transparent;
+        border-right: 20rem solid transparent;
+        border-bottom: 20rem solid #E9EBF7;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+}
+
+.layout__section {
+    padding: 5rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 1080px) {
+    .layout {
+        flex-direction: row;
+    }
+
+    .layout__section {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1720px) {
+    .layout__section {
+        width: 40%;
+    }
+}
+
+.column__before {
+    font-size: 1.66rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    transform: translateX(-2px);
+}
+
+.column__heading {
+    font-size: 4.66rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.column__content {
+    font-size: 2.33rem;
+    line-height: 200%;
+    margin-bottom: 1.5rem;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 540px) {
+    .card__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: var(--color-background-secondary);
+    border: solid 1px var(--color-additional-1);
+}
+
+.card__logo {
+    width: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #777788;
+    color: #15152f;
+    margin-bottom: 2rem;
+}
+
+/* color property is for .svg but i can not find one :C */
+.card__logo--blue {
+    color: #1E88E5;
+    background-color: #BBDEFB;
+}
+
+.card__logo--green {
+    color: #43A048;
+    background-color: #C7E6C8;
+}
+
+.card__logo--yellow {
+    color: #F9A825;
+    background-color: #FFF9C4;
+}
+
+.card__logo--purple {
+    color: #8D25AA;
+    background-color: #E1BEE7;
+}
+
+.card__heading {
+    font-size: 2rem;
+    line-height: 150%;
+    margin-bottom: 1rem;
+}
+
+.card__content {
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 540px) {
+    .card {
+        margin-bottom: 0;
+    }
+
+    .card--bottom {
+        transform: translateY(-2rem);
+    }
+}
+
+.button {
+    padding: 1rem 1.5rem;
+    font-size: 1.66rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--color-accent-primary);
+    color: var(--color-background-primary);
+    cursor: pointer;
+}
+
+.heading {
+    color: var(--color-foreground-secondary);
+}
+
+.accent {
+    color: var(--color-accent-secondary);
+}
