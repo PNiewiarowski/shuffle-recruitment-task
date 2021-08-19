@@ -67,11 +67,11 @@ body {
     left: 0;
     bottom: 0;
     width: 40%;
-    height: 60%;
+    height: 63%;
     border-radius: 100% 0 0 0;
     background: linear-gradient(
-      var(--color-background-primary),
-      var(--color-background-secondary)
+      var(--color-background-primary) 30%,
+      var(--color-background-secondary) 80%
     );
     z-index: -1;
   }
@@ -116,21 +116,21 @@ body {
 .column__before {
   font-size: 1.66rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.33rem;
   transform: translateX(-2px);
 }
 
 .column__heading {
-  font-size: 4.66rem;
+  font-size: 6rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.33rem;
   letter-spacing: 1px;
 }
 
 .column__content {
   font-size: 2.33rem;
   line-height: 200%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.33rem;
 }
 
 .card__container {
@@ -155,12 +155,12 @@ body {
 }
 
 .card__logo {
-  width: 40px;
-  padding: 10px;
+  width: 50px;
+  padding: 12px;
   border-radius: 5px;
   background-color: #777788;
   color: #15152f;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .card__logo--blue {
@@ -184,13 +184,13 @@ body {
 }
 
 .card__heading {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 150%;
   margin-bottom: 1rem;
 }
 
 .card__content {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 150%;
 }
 
@@ -209,7 +209,7 @@ body {
 }
 
 .button {
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.75rem;
   font-size: 1.66rem;
   font-weight: 500;
   text-transform: uppercase;
